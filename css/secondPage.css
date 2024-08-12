@@ -1,0 +1,167 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+.container{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to bottom, #40405c 0%,#6f71aa 80%,#8a76ab 100%);
+    position: relative;
+}
+.suelo{
+    width: inherit;
+    height: 200px;
+    background: linear-gradient(to right,#9be15d,#00e3ae);
+    border-radius: 40% 40% 0 0;
+    position: absolute;
+    top: calc(100vh - 100px);
+}
+
+.flor_container {
+  width: 100px;
+  height: 350px;
+  position: absolute;
+}
+.flor_container:nth-child(2){
+    top: calc(100vh - 350px);
+    left: calc(50vw - 200px);
+}
+.flor_container:nth-child(3){
+    top: calc(100vh - 350px);
+    left: calc(50vw - 70px);
+}
+
+.petalos {
+  width: 50px;
+  height: 70px;
+  background: radial-gradient(circle, #bb2d01, #ff1515);
+  position: absolute;
+  filter: drop-shadow(0 0 6px #bb2d01);
+  z-index: 30;
+}
+
+.petal_left {
+  border-radius: 0 50% 0 50%;
+}
+
+.petal_right {
+  border-radius: 50% 0 50% 0;
+}
+
+.petalos:nth-child(2) {
+  top: 25%;
+  left: 44%;
+}
+.petalos:nth-child(3) {
+  top: 25%;
+  left: 50%;
+}
+
+.petalos:nth-child(4) {
+  top: 27%;
+  left: 37%;
+  animation-name: petal3;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+.petalos:nth-child(5) {
+  top: 27%;
+  left: 58%;
+  animation-name: petal4;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+}
+.petalos:nth-child(6) {
+  top: 30%;
+  left: 37%;
+  animation-name: petal5;
+  animation-delay: 0.3s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  border-radius: 0 50% 50% 50%;
+}
+
+.petalos:nth-child(7) {
+  top: 30%;
+  left: 58%;
+  animation-name: petal6;
+  animation-delay: 0.3s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  border-radius: 50% 0 50% 50%;
+}
+
+.tallo {
+  width: 8px;
+  height: 125px;
+  background-color: rgb(4, 139, 4);
+  position: absolute;
+  top: 45%;
+  left: 65%;
+}
+
+.epinas {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(4, 139, 4);
+  clip-path: polygon(50% 49%, 0% 100%, 100% 100%);
+  transform: rotate(90deg);
+  position: absolute;
+}
+
+.epinas:nth-child(9) {
+  top: 50%;
+  left: 73%;
+}
+
+.epinas:nth-child(10) {
+  top: 70%;
+  left: 73%;
+}
+
+.epinas:nth-child(11) {
+  top: 60%;
+  left: 50%;
+  transform: rotate(-90deg);
+}
+/* Animaciones */
+
+@keyframes petal3 {
+    to {
+      transform: rotate(-20deg);
+    }
+  }
+  
+  @keyframes petal4 {
+    to {
+      transform: rotate(20deg);
+    }
+  }
+  
+  @keyframes petal5 {
+    to {
+      transform: rotate(-40deg);
+    }
+  }
+  
+  @keyframes petal6 {
+    to {
+      transform: rotate(40deg);
+    }
+  }
+
+#texto{
+    margin-top: 50px ;
+    color: #fff;
+    text-align: center;
+}
